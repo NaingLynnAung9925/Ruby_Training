@@ -10,9 +10,9 @@ if array_size <= array.length
     animal_name = gets.chomp()
     animal_array.push(animal_name)
   end
-  puts "Animals names are #{animal_array.sort}"
+  puts "Animals names are #{animal_array.uniq.sort}"
   puts "Animals array count are #{animal_array.count}"
-  puts "Animals array reverse are #{animal_array.reverse}"
+  puts "Animals array reverse are #{animal_array.uniq.sort.reverse}"
 
 elsif array_size >= array.length
    array_size = 10
@@ -21,9 +21,9 @@ elsif array_size >= array.length
     animal_name = gets.chomp()
     animal_array.push(animal_name)
   end
-  puts "Animals array sort are #{animal_array.sort}"
+  puts "Animals array sort are #{animal_array.uniq.sort}"
   puts "Animals array count are #{animal_array.count}"
-  puts "Animals array reverse are #{animal_array.reverse}"
+  puts "Animals array reverse are #{animal_array.uniq.sort.reverse}"
 
   else
     puts "Your are something wrong"

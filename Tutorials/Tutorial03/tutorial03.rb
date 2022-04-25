@@ -22,7 +22,7 @@ end
 puts "Do you want to continue/stop?"
 choose = gets.chomp()
 
-if choose == "continue"
+while choose == "continue"
 
   puts "Enter the first number"
   num1 = gets.chomp().to_f
@@ -44,7 +44,6 @@ if choose == "continue"
   else
     puts "Please Enter the Correct Operator"
 end
-
-else
-  puts "Exit from Calculator"
+  puts "Do you want to continue/stop?"
+  choose = gets.chomp()
 end 

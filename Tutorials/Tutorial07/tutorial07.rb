@@ -1,19 +1,27 @@
 class Person
+
   @name
+
   def print_name(name)
+
     @name = name
     puts "Your Name is #{@name}"
+
   end
+
 end
 
-class Student
-  @name 
+class Student < Person
+  
   @roll_number
-  def print_roll(name, roll_number)
-    @name = name
+
+  def print_roll(roll_number)
+   
     @roll_number = roll_number
-    puts "Your Name is #{@name} and Roll Number is #{@roll_number}"
+    puts "Roll Number is #{@roll_number}"
+
   end
+
 end
 
 puts "Choose Person/Student"
@@ -36,7 +44,8 @@ elsif choose == "Student"
   student_roll_num = gets.chomp
 
   student = Student.new
-  student.print_roll(student_name, student_roll_num)
+  student.print_name(student_name)
+  student.print_roll(student_roll_num)
 
 else
 
@@ -63,7 +72,9 @@ else
       student_roll_num = gets.chomp
 
       student = Student.new
-      student.print_roll(student_name, student_roll_num)
+      student.print_name(student_name)
+      student.print_roll(student_roll_num)
+      
     end
 
    end
